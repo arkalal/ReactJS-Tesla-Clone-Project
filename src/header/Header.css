@@ -1,0 +1,53 @@
+.header-logo img{
+    object-fit: contain;
+    width: 90px;
+    margin-right: 100px;
+    flex: 1;
+}
+
+.header{
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    padding-top: 15px;
+}
+
+.header-links{
+    display: flex;
+    gap: 15px;
+}
+
+.header-links a, .header-right a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    color: black;
+}
+
+.header-right a{
+    position: relative;
+    z-index: 0;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.closeOpen{
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.header-linkHidden{
+    visibility: hidden;
+}

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './header/Header';
 
 const App = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
     return <div>
-        <h2>Tesla Clone!!</h2>
-        <Header></Header>
+        <Header menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></Header>
         {/* Header Block */}
     </div>;
 };
