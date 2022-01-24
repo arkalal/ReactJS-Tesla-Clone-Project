@@ -4,6 +4,7 @@ import Header from './header/Header';
 import Menu from './side menu/Menu';
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
+import Login from './login/Login';
 
 const App = () => {
 
@@ -13,6 +14,8 @@ const App = () => {
         <Routes>
             <Route path='/' element={<><Header menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></Header>{isMenuOpen && <Menu></Menu>}<HeaderBlock></HeaderBlock></>}>
             </Route>
+
+            <Route path='/login' element={<><Login></Login></>}></Route>
         </Routes>
     </div>;
 };
