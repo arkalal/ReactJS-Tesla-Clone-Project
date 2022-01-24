@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HeaderBlock from './header block/HeaderBlock';
 import Header from './header/Header';
 import Menu from './side menu/Menu';
 
@@ -9,7 +10,7 @@ const App = () => {
     return <div>
         <Header menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></Header>
         {isMenuOpen && <Menu></Menu>}
-        {/* Header Block */}
+        <HeaderBlock></HeaderBlock>
     </div>;
 };
 
