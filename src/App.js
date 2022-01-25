@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
 import { useSelector } from 'react-redux';
 import TeslaProfile from './my profile/TeslaProfile';
+import SignUp from './signup/SignUp';
 
 const App = () => {
 
@@ -20,6 +21,8 @@ const App = () => {
             </Route>
 
             <Route path='/login' element={<>{user ? <TeslaProfile></TeslaProfile> : <Login></Login>}<Login></Login></>}></Route>
+
+            <Route path='/signup' element={<SignUp></SignUp>}></Route>
         </Routes>
     </div>;
 };
