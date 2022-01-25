@@ -1,17 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonSecondary from './ButtonSecondary';
+import { auth } from '../firebase/firebase'
+import { useDispatch } from 'react-redux';
+import { login } from '../redux store/userSlice'
 
 const Login = () => {
 
     const [Email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     const signIn = (e) => {
         e.preventDefault()
+
+        auth.signInWithEmailAndPassword(Email, Password).then((userAuth) => {
+            dispatch(login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: userAuth.user.displayName
+            }))
+
+            navigate('/teslaaccount')
+        }).catch((error) => {
+            alert(error)
+        })
     }
 
     return <div className='login'>
