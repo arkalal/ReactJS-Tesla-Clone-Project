@@ -51,7 +51,7 @@
 .signup-info h1{
     font-size: 40px;
     font-weight: 500;
-    margin-left: -10px;
+    margin-left: -60px;
 }
 
 .signup-form{
@@ -99,4 +99,8 @@
 .signup-divider span{
     font-weight: 500;
     color: #5c5e62;
+}
+
+.buttonSecondary-Signup{
+    margin-bottom: 80px;
 }

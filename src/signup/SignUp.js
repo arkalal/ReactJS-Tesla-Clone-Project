@@ -5,6 +5,7 @@ import './SignUp.css'
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import ButtonPrimary from '../login/ButtonPrimary';
 import ButtonSecondary from '../login/ButtonSecondary';
+import { auth } from '../firebase/firebase';
 
 const SignUp = () => {
 
@@ -16,8 +17,10 @@ const SignUp = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const createAccount = () => {
+    const createAccount = (e) => {
+        e.preventDefault()
 
+        auth.createUserWithEmailAndPassword(Email, Password)
     }
 
     return <div className='signup'>
@@ -34,7 +37,7 @@ const SignUp = () => {
         </div>
 
         <div className="signup-info">
-            <h1>Sign Up</h1>
+            <h1>Create Account</h1>
 
             <form action="" className="signup-form">
                 <label htmlFor="fname">First Name</label>
@@ -57,7 +60,7 @@ const SignUp = () => {
             </div>
 
             <Link to='/login'>
-                <ButtonSecondary name='Sign In'></ButtonSecondary>
+                <ButtonSecondary name='Sign In' secondoryManipulate></ButtonSecondary>
             </Link>
         </div>
     </div>;

@@ -20,9 +20,9 @@ const App = () => {
             <Route path='/' element={<><Header menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></Header>{isMenuOpen && <Menu></Menu>}<HeaderBlock></HeaderBlock></>}>
             </Route>
 
-            <Route path='/login' element={<>{user ? <TeslaProfile></TeslaProfile> : <Login></Login>}<Login></Login></>}></Route>
+            <Route path='/login' element={<>{user ? <TeslaProfile></TeslaProfile> : <Login></Login>}</>}></Route>
 
-            <Route path='/signup' element={<SignUp></SignUp>}></Route>
+            <Route path='/signup' element={<SignUp test></SignUp>}></Route>
         </Routes>
     </div>;
 };
