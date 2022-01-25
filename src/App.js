@@ -5,8 +5,12 @@ import Menu from './side menu/Menu';
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
+import { useSelector } from 'react-redux';
+import TeslaProfile from './my profile/TeslaProfile';
 
 const App = () => {
+
+    const user = useSelector((state) => state.user.user)
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -15,7 +19,7 @@ const App = () => {
             <Route path='/' element={<><Header menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></Header>{isMenuOpen && <Menu></Menu>}<HeaderBlock></HeaderBlock></>}>
             </Route>
 
-            <Route path='/login' element={<><Login></Login></>}></Route>
+            <Route path='/login' element={<>{user ? <TeslaProfile></TeslaProfile> : <Login></Login>}<Login></Login></>}></Route>
         </Routes>
     </div>;
 };
