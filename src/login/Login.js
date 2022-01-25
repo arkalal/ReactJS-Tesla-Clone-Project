@@ -37,7 +37,7 @@ const Login = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" id='password' value={Password} onChange={(e) => { setPassword(e.target.value) }} />
 
-                <ButtonPrimary name='SignIn' type='submit' onClick={signIn}></ButtonPrimary>
+                <ButtonPrimary name='Sign In' type='submit' onClick={signIn}></ButtonPrimary>
             </form>
 
             <div className="login-divider">
