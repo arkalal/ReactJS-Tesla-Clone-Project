@@ -45,7 +45,7 @@ const TeslaProfile = ({ menuOpen, setMenu }) => {
 
         <div className="teslaAccount-info">
             <div className="teslaAccount-person">
-                <h4> {user?.displayName + "'s"} </h4>
+                <h4> {user?.displayName + "'s"} Profile </h4>
             </div>
 
             <div className="teslaAccount-infoRight">
