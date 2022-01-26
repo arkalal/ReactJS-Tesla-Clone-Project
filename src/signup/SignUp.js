@@ -6,6 +6,7 @@ import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import ButtonPrimary from '../login/ButtonPrimary';
 import ButtonSecondary from '../login/ButtonSecondary';
 import { auth } from '../firebase/firebase';
+import { login } from '../redux store/userSlice'
 
 const SignUp = () => {
 
@@ -20,7 +21,21 @@ const SignUp = () => {
     const createAccount = (e) => {
         e.preventDefault()
 
-        auth.createUserWithEmailAndPassword(Email, Password)
+        auth.createUserWithEmailAndPassword(Email, Password).then((userAuth) => {
+            userAuth.user.updateProfile({
+                displayName: fName
+            }).then(() => {
+                dispatch(login({
+                    email: userAuth.user.email,
+                    uid: userAuth.user.uid,
+                    displayName: fName
+                }))
+
+                navigate('/teslaaccount')
+            })
+        }).catch((error) => {
+            alert(error)
+        })
     }
 
     return <div className='signup'>

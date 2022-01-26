@@ -31,7 +31,7 @@
 
 /* conditional styling */
 
-.buttonSecondary:hover{
+.buttonSecondary:hover, .buttonSecondary-Manipulate:hover{
     background-color: #171a20;
     color: white;
 }

@@ -3,7 +3,7 @@ import HeaderBlock from './header block/HeaderBlock';
 import Header from './header/Header';
 import Menu from './side menu/Menu';
 import './App.css'
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
 import { useSelector } from 'react-redux';
 import TeslaProfile from './my profile/TeslaProfile';
@@ -20,9 +20,11 @@ const App = () => {
             <Route path='/' element={<><Header menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></Header>{isMenuOpen && <Menu></Menu>}<HeaderBlock></HeaderBlock></>}>
             </Route>
 
-            <Route path='/login' element={<>{user ? <TeslaProfile></TeslaProfile> : <Login></Login>}</>}></Route>
+            <Route path='/login' element={<>{user ? <Navigate replace to='/teslaaccount'></Navigate> : <Login></Login>}</>}></Route>
 
             <Route path='/signup' element={<SignUp test></SignUp>}></Route>
+
+            <Route path='/teslaaccount' element={<>{user ? <Navigate replace to='/login'></Navigate> : <TeslaProfile menuOpen={isMenuOpen} setMenu={setIsMenuOpen}></TeslaProfile>}{isMenuOpen && <Menu></Menu>}</>}></Route>
         </Routes>
     </div>;
 };
