@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Tesla Clone build by Arka Lal - Steps to Know
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In order to open and use my tesla clone build click on the link that is given under the about section of my github repository.
 
-## Available Scripts
+Advised to test the link in google chrome for better experience and you can also test it with the chrome dev tools.
 
-In the project directory, you can run:
+The Web App is hosted freely on the cloud with the help of google firebase as it is just a project. This will help anyone to view my project publicly and test all of it's functionalities that i have developed.
 
-### `npm start`
+# The Web App functionalities and How to use It?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. When you will view the link, the Home page will open on your screen where you will be able to see the official home page of tesla but it is just a clone developed by me. The entire UI is almost similar to the official website. I have tried to make it so with my CSS Skills 🚀
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. The home page has a single page and it is not scrollable as I have just made the first half portion of the page. But it is packed up with highend authentication functionalities of signing up and logging it. All of it has been done with the help of React Redux Toolkit and Firebase.
 
-### `npm test`
+3. Once you are in the home page now toggle the Tesla Account button on the right side and you will be redirected to the login page where you will have both the option of signing in or even signup if you not created and account.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Yes, you heard it right! You can actually create an account from scratch in my tesla clone side. As soon as you fill in the details and hit signup your account will be created as per the data given by you and you will be redirected to your tesla profile inside my web app.
 
-### `npm run build`
+5. All your input values will be automaticaly stored in my redux store with the help of the login action created by me with redux functionalities. And as per your input, data will be fetched from the redux store and will be displayed on your tesla profile along with the firebase authentication functionalities.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I Hope you like my tesla clone build! And If you love it then pleasae do follow my profile and leave a star on my repository. THANK YOU!
