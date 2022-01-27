@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "linkedin-project-2e2a1"
+  },
+  "targets": {
+    "linkedin-project-2e2a1": {
+      "hosting": {
+        "tsl": [
+          "tesla-clone-89"
+        ]
+      }
+    }
+  }
+}

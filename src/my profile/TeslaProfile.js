@@ -1,21 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './TeslaProfile.css'
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useDispatch, useSelector } from 'react-redux';
 import TeslaAccountCard from './TeslaAccountCard';
 import { logout } from '../redux store/userSlice';
+import { auth } from '../firebase/firebase';
 
 const TeslaProfile = ({ menuOpen, setMenu }) => {
 
     const user = useSelector((state) => state.user.user)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const logOut = (e) => {
         e.preventDefault()
 
-        dispatch(logout())
+        auth.signOut().then(() => {
+            dispatch(logout())
+            navigate('/')
+        }).catch((error) => {
+            alert(error)
+        })
     }
 
     return <div className='teslaAccount'>
